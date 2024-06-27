@@ -2,8 +2,8 @@ name: CI - Step 2 - Build and release
 
 on:
   push:
-    branches:
-      - release/github
+    tags:
+      - 'v*'  # This will trigger on any tag that starts with 'v'
 
 jobs:
   build-and-deploy:
