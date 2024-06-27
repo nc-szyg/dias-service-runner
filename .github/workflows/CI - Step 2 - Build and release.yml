@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up JDK 11
         uses: actions/setup-java@v2
@@ -18,17 +19,17 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
 
-      - name: Verify Java Version
+      - name: Verify Java version
         run: java -version
 
-      - name: Verify Maven Version
+      - name: Verify Maven version
         run: mvn -version
 
-      - name: Clean Maven Repository
+      - name: Clean Maven repository
         run: mvn clean
 
       - name: Build with Maven
-        run: mvn clean install -X
+        run: mvn clean install -DskipTests -X
 
       - name: Create Release
         id: create_release
