@@ -47,5 +47,5 @@ If you want to build app to JAR you need:
 ### How to run from bash console
 ```text
 If you want to run from bash console (to f.e. see logs) you need:
-java -jar dias_service_runner-1.0.jar
+java -jar script_control_panel-1.0.jar
 ```

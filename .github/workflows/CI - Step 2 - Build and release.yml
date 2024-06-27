@@ -48,6 +48,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/dias_service_runner-1.0.jar
-          asset_name: dias_service_runner.jar
+          asset_path: ./target/script_control_panel-1.0.jar
+          asset_name: script_control_panel-1.0.jar
           asset_content_type: application/java-archive
